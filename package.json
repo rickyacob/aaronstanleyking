@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "npm-run-all -s clean build:*",
+    "build": "npm-run-all -s build:*",
     "build:webpack": "npx webpack --config ./build/webpack.prod.config.js",
     "start": "npm-run-all dev:webpack dev:server",
     "dev:webpack": "npx webpack --config ./build/webpack.dev.config.js",

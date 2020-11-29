@@ -5,9 +5,10 @@
   "scripts": {
     "build": "npm-run-all -s build:*",
     "build:webpack": "npx webpack --config ./build/webpack.prod.config.js",
-    "start": "npm-run-all dev:webpack dev:server",
     "dev:webpack": "npx webpack --config ./build/webpack.dev.config.js",
-    "dev:server": "node app"
+    "dev:server": "npm-run-all dev:webpack dev:server",
+    "serve": "npm-run-all dev:webpack start",
+    "start": "node app"
   },
   "description": "My blog, written in Node and Express and hosted on Azure",
   "author": {

@@ -1,0 +1,25 @@
+doctype html
+//- Import mixins here to use globally
+include mixins/mixins.pug
+html(lang="en" class='antialiased overflow-y-scroll')
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+    title= title
+    if isProduction
+      link(href="css/main.min.css" rel='stylesheet')
+    else
+      link(href="css/main.css" rel='stylesheet')
+    if isProduction
+      script(defer src="js/sw.js")
+  body
+    a(class="sr-only" href="#main") Skip to content
+    include partials/header.pug
+    div.flex.flex-col.min-h-screen
+      include partials/main.pug
+        block content
+    if isProduction
+      script(src="js/main.min.js")
+    else
+      script(src="js/main.js")

@@ -3,6 +3,9 @@ const paths = require("../config/paths");
 const merge = require("webpack-merge");
 const webpackBaseConfig = require("./webpack.base.config.js");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const cssnano = require("cssnano");
 const autoprefixer = require("autoprefixer");
 const tailwind = require("tailwindcss")(
   path.resolve(paths.config, "tailwind.config.js")

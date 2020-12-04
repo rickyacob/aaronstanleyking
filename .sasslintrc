@@ -1,8 +1,0 @@
-{
-  "files": {
-    "include": "./src/assets/scss/**/*.s+(a|c)ss",
-    "ignore": [
-      "./src/assets/scss/vendor/**/*.*"
-    ]
-  }
-}

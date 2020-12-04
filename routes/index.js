@@ -5,7 +5,7 @@ var isProduction = (process.env.NODE_ENV === "production");
 
 /* GET home page. */
 router.get('/', function (req, res) {
-    res.render('index', { title: 'Express', isProduction: isProduction });
+    res.render('index', { title: 'Aaron Stanley King', isProduction: isProduction });
 });
 
 module.exports = router;

@@ -1,5 +1,13 @@
 extends includes/layout
 
-block content
-  h1(class="font-sans")= title
-  p(class="font-mono") Welcome to #{title}
+block layout-content
+  div.View.WelcomeView
+    h1.Banner Aaron Stanley King
+    div.Message
+      div.Title
+        h3 Heading 3
+        h1 Heading
+      span.Details Details go here
+    div.NavButtons
+      a(href="/user")
+        div.NavButton User Info

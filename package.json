@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node app",
-    "dev": "nodemon ./app.js",
+    "start": "node -r esm app",
+    "dev": "nodemon -r esm ./app.js",
     "ui": "browser-sync start --config bs-config.js"
   },
   "description": "My blog, written in Node and Express and hosted on Azure",
@@ -19,6 +19,7 @@
     "cookie-parser": "^1.4.0",
     "cors": "^2.8.5",
     "debug": "^2.2.0",
+    "esm": "^3.2.25",
     "express": "^4.14.0",
     "morgan": "^1.7.0",
     "pug": "^2.0.0-beta6",

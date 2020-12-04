@@ -1,17 +1,17 @@
 'use strict';
-var debug = require('debug');
-var compression = require('compression')
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+let debug = require('debug');
+let compression = require('compression');
+let express = require('express');
+let path = require('path');
+let logger = require('morgan');
+let cookieParser = require('cookie-parser');
+let bodyParser = require('body-parser');
 
-var routes = require('./routes/index');
-var user = require('./routes/user');
+let routes = require('./routes/index');
+let user = require('./routes/user');
 
-var app = express();
+let app = express();
+app.disable("x-powered-by");
 app.use(compression());
 
 // view engine setup
@@ -25,15 +25,15 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-var options = {
+let options = {
     dotfiles: 'ignore',
     etag: false,
     extensions: ['htm', 'html'],
     index: false,
     maxAge: '1d',
     redirect: false,
-    setHeaders: function (res, path, stat) {
-      res.set('x-timestamp', Date.now())
+    setHeaders: function (res, pth, stat) {
+      res.set('x-timestamp', Date.now());
     }
   };
 
@@ -44,7 +44,7 @@ app.use('/user', user);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
-    var err = new Error('Not Found');
+    let err = new Error('Not Found');
     err.status = 404;
     next(err);
 });
@@ -73,8 +73,8 @@ app.use(function (err, req, res, next) {
     });
 });
 
-app.set('port', process.env.PORT || 8000);
+app.set('port', process.env.PORT || 3000);
 
-var server = app.listen(app.get('port'), function () {
+let server = app.listen(app.get('port'), function () {
     debug('Express server listening on port ' + server.address().port);
 });

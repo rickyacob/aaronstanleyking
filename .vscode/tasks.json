@@ -3,10 +3,10 @@
 	"tasks": [
 		{
 			"type": "npm",
-			"script": "webpack",
+			"script": "build",
 			"problemMatcher": [],
-			"label": "webpack",
-			"detail": "npx webpack --config ./build/webpack.dev.config.js"
+			"label": "build",
+			"detail": "rollup -c"
 		}
 	]
 }

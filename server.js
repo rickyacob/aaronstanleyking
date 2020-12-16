@@ -3,16 +3,17 @@ let debug = require('debug');
 let compression = require('compression');
 let express = require('express');
 let path = require('path');
+var favicon = require('serve-favicon')
 let logger = require('morgan');
 let cookieParser = require('cookie-parser');
 let bodyParser = require('body-parser');
 
 let routes = require('./routes/index');
-let user = require('./routes/user');
 
 let app = express();
 app.disable("x-powered-by");
 app.use(compression());
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -40,7 +41,6 @@ let options = {
 app.use(express.static(path.join(__dirname, 'public'), options));
 
 app.use('/', routes);
-app.use('/user', user);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

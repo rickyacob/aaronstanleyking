@@ -1,5 +1,7 @@
 # Aaron Stanley King
-### [www.aaronstanleyking.com](https://www.aaronstanleyking.com)  
+
+### PROD [www.aaronstanleyking.com](https://www.aaronstanleyking.com)  
+### DEV [aaronstanleyking.azurewebsites.net](https://aaronstanleyking.azurewebsites.net/)
 This is my blog and it written in Node and Express and hosted on [Azure](https://azure.microsoft.com/).
 
 ***Why write custom code to host a blog?***  

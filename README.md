@@ -20,3 +20,5 @@ Because I wanted to.  It is also where I practice code for the [OpenJS Certifica
 **Goal** 
 
 Create a data driven progressive web application with presentation, analytics, and administration with a 4x100% Lighthouse score.
+
+![Google Lighthouse Score](goal.gif "Google Lighthouse Score")

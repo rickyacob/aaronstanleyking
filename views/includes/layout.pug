@@ -1,6 +1,6 @@
 block variables
 doctype html
-html(lang="en" class='antialiased overflow-y-scroll')
+html(lang="en")
   head
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
@@ -9,7 +9,7 @@ html(lang="en" class='antialiased overflow-y-scroll')
     meta(name="description" content={description})
     link(rel="shortcut icon" href="/favicon.ico")
     title #{title} | Aaron Stanley King
-    link(href="/css/main.css" rel='stylesheet')
     link(href="/build/bundle.css" rel='stylesheet')
+    script(src="/build/bundle.js" defer)
   body
     block layout-content

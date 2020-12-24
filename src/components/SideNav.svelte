@@ -1,25 +1,14 @@
 <script>
     import {
-        SkipToContent,
-        Header,
         SideNav,
         SideNavItems,
         SideNavMenu,
         SideNavMenuItem,
         SideNavLink,
     } from "carbon-components-svelte";
-    let isSideNavOpen = false;
+    export let isSideNavOpen = false;
 </script>
 
-<Header
-    company=""
-    platformName="Aaron Stanley King"
-    href="/"
-    bind:isSideNavOpen>
-    <div slot="skip-to-content">
-        <SkipToContent />
-    </div>
-</Header>
 <SideNav bind:isOpen={isSideNavOpen}>
     <SideNavItems>
         <SideNavLink text="Link 1" />

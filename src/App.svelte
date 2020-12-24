@@ -8,9 +8,7 @@
 		Column,
 		Tabs,
 		TabContent,
-		Tab,
-		Select,
-		SelectItem,
+		Tab
 	} from "carbon-components-svelte";
 	import Header from "./components/Header.svelte";
 	import Theme from "./components/Theme.svelte";
@@ -32,25 +30,12 @@
 				<Column lg={16}>
 					<Breadcrumb noTrailingSlash aria-label="Page navigation">
 						<BreadcrumbItem href="/">
-							Getting started
+							Home
 						</BreadcrumbItem>
 					</Breadcrumb>
 					<h1 style="margin-bottom: 1.5rem">
-						Design &amp; build with Carbon
-					</h1>
-				</Column>
-			</Row>
-			<Row>
-				<Column lg={16}>
-					<main>
 						<h1>Hello {name}!</h1>
-						<p>
-							Visit the
-							<a href="https://svelte.dev/tutorial">Svelte
-								tutorial</a>
-							to learn how to build Svelte apps.
-						</p>
-					</main>
+					</h1>
 				</Column>
 			</Row>
 			<Row>
@@ -64,23 +49,6 @@
 								<TabContent {...props}>
 									<Row>
 										<Column md={4} lg={7}>
-											<Select
-												labelText="Carbon theme"
-												bind:selected={theme}
-												style="margin-bottom: 1rem">
-												<SelectItem
-													value="white"
-													text="White" />
-												<SelectItem
-													value="g10"
-													text="Gray 10" />
-												<SelectItem
-													value="g90"
-													text="Gray 90" />
-												<SelectItem
-													value="g100"
-													text="Gray 100" />
-											</Select>
 											<p>
 												Carbon is IBM’s open-source
 												design system for digital
